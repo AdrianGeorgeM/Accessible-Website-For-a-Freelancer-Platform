@@ -46,4 +46,4 @@ Aim of the project was to create a prototype for the website with a **homepage**
 - Test with screen reader
 - Adding a JSON field for the alt description for each image
 
-https://adriangeorgem.github.io/Accessible-Website-For-a-Freelancer-Platform/photographer-page.html?photographer_id=82
+https://adriangeorgem.github.io/Accessible-Website-For-a-Freelancer-Platform/index.html
