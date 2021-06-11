@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" class="ref">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Fisheye Photographer</title>
+</head>
+
+
+<body>
+    <header class="logo" id="logo">
+        <a href="./index.html">
+            <picture class="home">
+                <source srcset="logo.png">
+                <img alt="Fisheye Home page" src="logo.png" style="width: 200px;">
+            </picture>
+        </a>
+    </header>
+
+
+    <main class="main-section">
+        <div class="wrapper" id="wrapper">
+        <div class="photographer-info">
+            <div class="info-details">
+                <!-- photographer name on photographer page -->
+                <h1 class="photographer-name-pp" id="photographer-name-pp" tabindex="0"></h1>
+                <div class="photographer-details">
+                    <!-- location-pp location on the photographer page -->
+                    <div class="location-pp" id="location-pp" tabindex="0" ></div>
+                    <!-- description-pp - description on the photographer page -->
+                    <div class="description-pp" id="description-pp" tabindex="0"></div>
+                </div>
+                <br>
+                <div class="photographer-categories-pp">
+                    <div class="button-pp" id="button-pp">
+                    </div>
+                </div>
+                <button class="active btn contact modal-btn" aria-label="Contact me">Contact me</button>
+
+            </div>
+            <picture class="front-photo photo-right-aligned" id="front-photo">
+            </picture>
+        </div>
+
+        <div class="media-items">
+            <div class="media-select-menu">
+                <label id="orderby" for="selectOption">Order by</label>
+                <div class="dropdown-select" tabindex="0" aria-label="Order by">
+                    <select id="selectOption" name="options" >
+                        <option label="Popularity" value="0">Popularity</option>
+                        <option label="Date" value="1">Date</option>
+                        <option label="Title" value="2">Title</option>
+                    </select>
+                </div>
+            </div>
+            <div class="portfolio" id="portfolio"></div>
+
+        </div>
+        <div class="fixed-info-box">
+            <div class="like">
+                <div class="number-of-likes" id="sum-likes">297 081</div>
+                <em class="fa fa-heart"></em>
+            </div>
+            <!-- price-pp price in the photographer page -->
+            <div class="price-pp" id="price-pp">300$ / Day</div>
+        </div>
+
+        <button class="fixed-contact modal-btn">Contact me</button>
+    </div>
+
+        <!-- lightbox modal -->
+
+        <div class="lightbox" id="myLightbox" role="dialog" id="dialog-1" aria-label="image close up view">
+            <span class="closelightbox cursor" onclick="closeLightbox()" aria-label="Close dialog"
+                aria-modal="true">&times;</span>
+            <div class="lightbox-content" id="lightbox-content">
+
+
+                <!-- Next/previous controls -->
+                <a class="prev" onclick="plusSlides(-1)" aria-label="Previous image">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)" aria-label="Next-image">&#10095;</a>
+
+                <!-- Caption text -->
+                <div class="caption-container">
+                    <p id="caption"></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- contact form -->
+        <div class="bground" role="dialog"  id="dialog1">
+            <div class="content">
+                <span class="close" aria-label="Close Contact Form"></span>
+                <div class="modal-body">
+                    <div class="modal-title" tabindex="0" >Contact me</div>
+                    <div class="modal-photographer-name" id="modal-photographer-name" tabindex="0" ></div>
+                    <form name="contactform" id="contactform" method="get" onsubmit="return validateForm();">
+                        <div class="formData" data-error="Please enter 2+ characters for name field" >
+                            <label class="modal-text" for="first"  id="first-name" > First Name</label>
+                            <input class="text-control" type="text" id="first" name="first" 
+                                aria-describedby="first-name" aria-labelledby="first-name">
+                        </div>
+                        <div class="formData" data-error="Please enter 2+ characters for name field">
+                            <label class="modal-text" for="last" id="last-name" >Last Name</label>
+                            <input type="text" class="text-control" id="last" name="last" aria-labelledby="last-name">
+                        </div>
+                        <div class="formData" data-error="Please enter a valid email address">
+                            <label class="modal-text" for="email" id="email-input" >Email</label>
+                            <input type="text" class="text-control" id="email" name="email" aria-labelledby="email-input">
+                        </div>
+                        <div class="formData" data-error="Please enter 2+ characters for message field">
+                            <label class="modal-text" for="message" id="message-input" >Your message</label>
+                            <textarea id="message" name="message" rows="4" cols="50"
+                                aria-labelledby="message-input"></textarea>
+
+                        </div>
+                        <input class="btn-submit form-button" type="submit" class="button" value="Send"
+                            aria-label="Send" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script type="module" src="js/dropdown.js"></script>
+    <script type="module" src="js/photographerPage.js"></script>
+    <script src="js/lightbox.js"></script>
+    <script src="js/modal.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1032 @@
+:root {
+  --color-primary: #901c1c;
+  --font-color-primary: #bf5138;
+  --color-secondary: #d3573c;
+  --color-secondary-bg: #525252;
+  --grey-font: #fafafa;
+  --font-color-secondary: #901c1c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  min-height: 100vh;
+  margin: 20px 20px;
+  font-family: "DM Sans", sans-serif;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.skip-to-content {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.skip-to-content:focus {
+  z-index: 1;
+  position: fixed;
+  left: 45vw;
+  margin-bottom: 5px;
+  width: auto;
+  height: auto;
+  background-color: var(--font-color-primary);
+  height: 20px;
+  clip: unset;
+  margin-bottom: 10px;
+  color: black;
+}
+
+li {
+  list-style-type: none;
+}
+
+.header-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  .header-main {
+    flex-direction: column;
+    position: relative;
+  }
+}
+
+.logo {
+  width: 200px;
+  margin-top: 20px;
+  margin-left: 10px;
+  height: 50px;
+}
+
+.logo img {
+  width: 200px;
+  height: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  .logo {
+    margin: 0px;
+  }
+  .logo img {
+    width: 150px;
+    height: 37.5px;
+    margin: 0px;
+  }
+}
+
+.home {
+  width: 200px;
+  height: auto;
+}
+
+.filter-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 768px) {
+  .filter-list {
+    justify-content: center;
+  }
+}
+
+.filter {
+  color: var(--font-color-primary);
+  padding: 5px;
+  border-radius: 10px;
+  background-color: white;
+  margin-top: 5px;
+  margin-right: 5px;
+  border: 0.5px solid #c4c4c4;
+  box-sizing: border-box;
+  border-radius: 11px;
+}
+@media screen and (max-width: 768px) {
+  .filter {
+    font-weight: bolder;
+  }
+}
+
+.btn {
+  cursor: pointer;
+}
+
+.title {
+  color: var(--color-primary);
+  font-size: 36px;
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    position: absolute;
+    right: 0;
+    font-size: 18px;
+  }
+}
+
+.front-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 80px;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .front-main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 0px;
+  }
+}
+
+.photographer-card {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  margin-bottom: 10px;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+@media screen and (max-width: 768px) {
+  .photographer-card {
+    margin-bottom: 5px;
+    justify-content: center;
+  }
+}
+
+.photographer-main {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  justify-content: center;
+  align-content: center;
+}
+
+.front-photo {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.front-photo img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .front-photo img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+
+.photographer-name {
+  color: var(--font-color-primary);
+  font-size: 36px;
+  align-self: center;
+}
+
+@media screen and (max-width: 380px) {
+  .photographer-name {
+    font-size: 32px;
+   
+  }
+}
+
+
+.photographer-details {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  justify-content: center;
+  align-content: center;
+}
+
+.location {
+  text-align: center;
+  color: var(--font-color-primary);
+  margin-bottom: 5px;
+  font-size: 13px;
+}
+
+.description {
+  text-align: center;
+  font-size: 10px;
+}
+
+.price {
+  text-align: center;
+  color: var(--color-secondary-bg);
+  font-size: 9px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.photographer-categories {
+  position: relative;
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* style sr-only span tags */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* style the photographer page */
+
+.media-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.main-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.photographer-info {
+  position: relative;
+  background-color: var(--grey-font);
+  height: auto;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+  .photographer-info {
+    height: auto;
+    background: #fff;
+  }
+}
+
+.info-details {
+  margin: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .info-details {
+    margin: 0px;
+  }
+}
+
+.photographer-name-pp {
+  font-size: 64px;
+  color: var(--font-color-primary);
+  max-width: 30vw;
+}
+
+@media screen and (max-width: 768px) {
+  .photographer-name-pp {
+    font-size: 36px;
+    max-width: 50vw;
+  }
+}
+
+.location-pp {
+  font-size: 24px;
+  color: var(--font-color-secondary);
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .location {
+    font-size: 13px;
+  }
+}
+
+.description-pp {
+  font-size: 18px;
+  color: var(--color-secondary-bg);
+}
+
+@media screen and (max-width: 768px) {
+  .description-pp {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .description-pp {
+    font-size: 13px;
+  }
+}
+
+.photo-right-aligned {
+  position: absolute;
+  margin: 0;
+  right: -5%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 768px) {
+  .photo-right-aligned {
+    right: -15%;
+    top: 40%;
+  }
+
+  .photo-right-aligned img {
+    height: 150px;
+    width: 150px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .photo-right-aligned img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+.contact {
+  background-color: var(--font-color-secondary);
+  color: var(--grey-font);
+  width: 170px;
+  height: 69px;
+  font-size: 20px;
+  position: absolute;
+  top: 15%;
+  left: 35vw;
+  border-radius: 5px;
+  border: 0px;
+}
+
+@media screen and (max-width: 768px) {
+  .contact {
+    display: none;
+  }
+}
+
+.contact:hover {
+  background-color: var(--color-secondary);
+  cursor: pointer;
+  color: black;
+}
+
+.media-items {
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.media-select-menu {
+  position: relative;
+  align-self: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .media-select-menu {
+    display: none;
+  }
+}
+
+#orderby {
+  font-size: 18px;
+  margin-right: 15px;
+  font-weight: 800;
+  line-height: 40px;
+  margin-left: 20px;
+}
+
+/* dropdown menu stylinh here */
+/* here */
+
+.dropdown-select {
+  position: relative;
+  width: 170px;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+/*hide original SELECT element: */
+.dropdown-select select {
+  display: none;
+}
+
+.select-selected {
+  background-color: #911c1c;
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,
+.select-selected {
+  color: #ffffff;
+  padding: 10px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  background-color: #911c1c;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* style portfolio */
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+}
+
+@media screen and (max-width: 1024px) {
+  .portfolio {
+    flex-direction: column;
+  }
+}
+
+.photo img {
+  width: 100%;
+  height: 350px;
+  border: 5px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 1024px) {
+  .photo img {
+    width: 90vw;
+    height: 300px;
+  }
+}
+
+.video {
+  width: 100%;
+  height: 350px;
+  border: 5px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 1024px) {
+  .video {
+    width: 90vw;
+    height: 300px;
+  }
+}
+
+.photo-card {
+  position: relative;
+  flex-grow: 1;
+  width: 33%;
+  max-width: 33%;
+  margin-bottom: 30px;
+  padding: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+  .photo-card {
+    width: 50%;
+    padding-left: 20px;
+  }
+}
+
+.photo-card-details {
+  display: flex;
+  color: var(--font-color-secondary);
+  font-size: 24px;
+  width: 100%;
+
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 1024px) {
+  .photo-card-details {
+    width: 90vw;
+  }
+}
+
+.photo-description {
+  margin-right: 20px;
+  flex-basis: 60%;
+}
+
+.photo-price {
+  padding: 1px;
+}
+
+.like {
+  display: flex;
+}
+
+.fa-heart {
+  margin-left: 5px;
+  margin-top: 3px;
+}
+
+.fixed-info-box {
+  width: 376px;
+  height: 60px;
+  font-size: 24px;
+  background-color: #db8876;
+  position: fixed;
+  bottom: 0;
+  right: 3vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .fixed-info-box {
+    display: none;
+  }
+}
+
+.fixed-contact {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .fixed-contact {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--font-color-secondary);
+    color: var(--grey-font);
+    width: 170px;
+    height: 35px;
+    font-size: 18px;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    bottom: 20px;
+    left: 50%;
+    border-radius: 5px;
+    border: 0px;
+  }
+
+  .fixed-contact:hover {
+    background-color: var(--color-secondary);
+    cursor: pointer;
+    color: black;
+  }
+}
+
+/* styling contact form modal */
+
+.bground {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .bground {
+    background-color: #db8876;
+  }
+}
+
+.modal-title {
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: normal;
+  color: #000000;
+  font-size: 64px;
+}
+
+@media screen and (max-width: 768px) {
+  .modal-title {
+    font-size: 36px;
+  }
+}
+
+.modal-photographer-name {
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: normal;
+  color: #000000;
+  font-size: 64px;
+}
+
+@media screen and (max-width: 768px) {
+  .modal-photographer-name {
+    font-size: 36px;
+  }
+}
+
+.modal-text {
+  color: #312e2e;
+  font-size: 36px;
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: normal;
+}
+
+@media screen and (max-width: 768px) {
+  .modal-text {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
+
+.form-button {
+  background-color: var(--font-color-secondary);
+  color: var(--grey-font);
+  width: 170px;
+  height: 69px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: 0px;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .form-button {
+    height: 35px;
+    align-self: center;
+  }
+}
+
+.form-button:hover {
+  background-color: var(--color-secondary);
+  cursor: pointer;
+  color: black;
+}
+
+.content {
+  margin: auto;
+  width: 100%;
+  max-width: 700px;
+  animation-name: modalopen;
+  animation-duration: var(--modal-duration);
+  background: #db8876;
+  border-radius: 5px;
+  position: relative;
+  color: #fff;
+  padding-top: 10px;
+}
+
+.modal-body {
+  padding: 15px 8%;
+  margin: 15px auto;
+  width: auto;
+}
+
+.text-control label {
+  font-size: 17px;
+  font-weight: normal;
+  display: inline-block;
+  margin-bottom: 11px;
+}
+.text-control input {
+  padding: 8px;
+  border: 0.8px solid #ccc;
+  outline: none;
+}
+
+.text-control input:focus {
+  outline: 0;
+  border-color: #777;
+}
+
+.text-control.success input {
+  border-color: var(--success-color);
+}
+
+.text-control.error input {
+  border-color: var(--error-color);
+}
+
+input {
+  font-size: 18px;
+}
+
+.formData {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  align-content: center;
+}
+
+.formData[data-error]::after {
+  content: attr(data-error);
+  font-size: 0.8em;
+  color: #fff;
+  display: block;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  text-align: left;
+  line-height: 0.3;
+  opacity: 0;
+  transition: 0.3s;
+}
+.formData[data-error-visible="true"]::after {
+  opacity: 1;
+}
+.formData[data-error-visible="true"] .text-control {
+  border: 2px solid blue;
+}
+
+input[data-error]::after {
+  content: attr(data-error);
+  font-size: 0.4em;
+  color: blue;
+}
+
+.text-control small {
+  color: var(--error-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+.text-control.error small {
+  visibility: visible;
+}
+
+.text-control {
+  height: 68px;
+}
+
+@media screen and (max-width: 768px) {
+  .text-control {
+    height: 52px;
+  }
+}
+
+#message {
+  height: 170px;
+  font-size: 18px;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  #message {
+    height: 184px;
+  }
+}
+
+.close {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  width: 32px;
+  height: 32px;
+  opacity: 1;
+  cursor: pointer;
+  transform: scale(0.7);
+}
+.close:before,
+.close:after {
+  position: absolute;
+  left: 15px;
+  content: " ";
+  height: 33px;
+  width: 3px;
+  background-color: #fff;
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
+}
+
+/* Lightbox styling */
+
+/* The lightbox modal (background) */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .lightbox {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+/* Lightbox modal Content */
+.lightbox-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.closelightbox {
+  color: #911c1c;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .closelightbox {
+    position: absolute;
+    top: 10px;
+    right: 2vw;
+    font-size: 28px;
+    font-weight: normal;
+  }
+}
+
+.closelightbox:hover,
+.closelightbox:focus {
+  color: #bf5138;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Hide the slides by default */
+
+.lightboxSlides {
+  display: none;
+}
+
+.lightboxSlides img {
+  height: 90vh;
+  max-width: 90%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: cover;
+}
+
+.lightboxSlides video{
+  height: 90vh;
+  max-width: 90%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: cover;
+}
+
+.lightbox-text {
+  display: flex;
+  flex-wrap: wrap;
+  color: #911c1c;
+  font-size: 24px;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .lightbox-text {
+    justify-content: flex-start;
+    padding-left: 9px;
+  }
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: #911c1c;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+@media screen and (max-width: 768px) {
+  .prev {
+    left: -8.5%;
+  }
+
+  .next {
+    right: -8.5%;
+  }
+}
+
+.prev,
+.next:hover {
+  color: #bf5138;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.prev,
+.next:focus {
+  color: #bf5138;
+  text-decoration: none;
+  cursor: pointer;
+}

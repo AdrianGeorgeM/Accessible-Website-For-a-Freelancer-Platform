@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Adrian George" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" class="ref">
+
+    <title>Fish Eye website</title>
+</head>
+
+<body>
+
+    <header class="header-main" role="banner">
+        <a class="skip-to-content" href="#front-main">Skip to content</a>
+        <div class="logo">
+            <a href="./index.html">
+                <picture class="home">
+                    <source srcset="logo.png">
+                    <img alt="Fisheye Home page">
+                </picture>
+
+            </a>
+        </div>
+
+        <nav aria-label="photographer categories">
+            <ul class="filter-list" aria-label="filter">
+                <li id="myBtnContainer" aria-label="filter">
+                    <button class="filter btn" onclick="filterSelection('portrait')">#Portrait<span
+                            class="sr-only">(Tag)</span></button>
+                </li>
+                <li>
+                    <button class="filter btn" onclick="filterSelection('art')">#Art<span
+                            class="sr-only">(Tag)</span></button>
+                </li>
+                <li>
+                    <button class="filter btn" onclick="filterSelection('fashion')">#Fashion<span
+                            class="sr-only">(Tag)</span></button>
+                </li>
+                <li>
+                    <button class="filter btn" onclick="filterSelection('architecture')">#Architecture<span
+                            class="sr-only">(Tag)</span></button>
+                </li>
+                <li>
+                    <button class="filter btn" onclick="filterSelection('travel')">#Travel<span
+                            class="sr-only">(Tag)</span></button>
+                </li>
+                <li>
+                    <button class="filter btn" onclick="filterSelection('sport')">#Sport<span
+                            class="sr-only">(Tag)</span></button>
+                </li>
+                <li>
+                    <button class="filter btn" onclick="filterSelection('animals')">#Animals<span
+                            class="sr-only">(Tag)</span></button>
+                </li>
+                <li>
+                    <button class="filter btn" onclick="filterSelection('events')">#Events<span
+                            class="sr-only">(Tag)</span></button>
+                </li>
+            </ul>
+        </nav>
+        <h1 class="title">Our photographers</h1>
+
+    </header>
+
+    <main class="front-main" id="front-main"></main>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
