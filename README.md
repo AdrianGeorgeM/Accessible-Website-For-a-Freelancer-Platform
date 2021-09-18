@@ -1,6 +1,8 @@
 # Accessible-Website-For-a-Freelancer-Platform
 ## Description
 
+https://adriangeorgem.github.io/Accessible-Website-For-a-Freelancer-Platform/
+
 FishEye is a website for freelance photographers to show off their best work.
 
 Aim of the project was to create a prototype for the website with a **homepage** and **individual pages for every photographer**. In addition to that, the the site should be **accessible** to visually impaired users and users should be able to **navigate the site using keyboard controls**.A JSON to mimic the data structure on the database, as well as images and logo were provided.
@@ -46,4 +48,15 @@ Aim of the project was to create a prototype for the website with a **homepage**
 - Test with screen reader
 - Adding a JSON field for the alt description for each image
 
-https://adriangeorgem.github.io/Accessible-Website-For-a-Freelancer-Platform/
+Requirements
+must pass W3C validation for HTML and CSS without errors
+must be responsive for mobile and desktop, no tablet design needed
+use ESLint
+apply object-oriented programming
+use factory method pattern
+Challenges & Achievements
+bild custom drop down menu and apply ARIA attributes
+implement factory method pattern
+use Babel and set up webpack
+use of asynchronous programming to mimick server request
+
